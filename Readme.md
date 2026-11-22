@@ -10,20 +10,29 @@ Este repositório reúne três jogos 2D desenvolvidos com Godot 4 e GDScript.
 
 ## Executar no Godot
 
-Abra o gerenciador de projetos do Godot 4, importe o arquivo `project.godot` do jogo desejado e pressione **F5** no editor.
+Baixe a edição padrão do Godot 4 para Windows, extraia o ZIP e execute o arquivo `.exe`. [Download oficial do Godot](https://godotengine.org/download/windows/)
 
-### Webcam no Fruit Killer
+No gerenciador de projetos, clique em **Importar**, selecione o arquivo `project.godot` do jogo desejado e abra o projeto. No editor, pressione **F5** para rodar.
 
-Em um terminal PowerShell, a partir da raiz do repositório, instale as dependências e inicie o capturador.
+### Como rodar o Fruit Killer
 
-```powershell
-cd Fruit-Killer/Webcam-Capture
-python -m venv .venv
-.\.venv\Scripts\python.exe -m pip install -r requirements.txt
-.\.venv\Scripts\python.exe webcam_godot.py
-```
+Para jogar com o mouse, abra `Fruit-Killer/FruitKiller/project.godot` no **Godot 4.6 ou superior** e pressione **F5**. Para jogar com gestos, você também precisa de uma webcam e do **Python 3.12 de 64 bits** instalado no Windows. [Downloads oficiais do Python para Windows](https://www.python.org/downloads/windows/)
 
-Com a webcam disponível e o capturador em execução, abra o Fruit Killer no Godot. O capturador usa OpenCV e MediaPipe para rastrear as mãos e envia os dados ao jogo por UDP em `127.0.0.1:10050`.
+#### Abrir e executar o projeto Python
+
+1. Abra a pasta `Fruit-Killer/Webcam-Capture` no seu editor de código. O arquivo principal é `webcam_godot.py`.
+2. No PowerShell, a partir da raiz do repositório, execute os comandos abaixo para entrar na pasta, criar o ambiente virtual, instalar as dependências e iniciar o capturador.
+
+   ```powershell
+   cd Fruit-Killer/Webcam-Capture
+   py -3.12 -m venv .venv
+   .\.venv\Scripts\python.exe -m pip install -r requirements.txt
+   .\.venv\Scripts\python.exe webcam_godot.py
+   ```
+
+3. Deixe o capturador rodando, abra o Fruit Killer no Godot e pressione **F5**. O capturador usa OpenCV e MediaPipe para rastrear as mãos e envia os dados ao jogo por UDP em `127.0.0.1:10050`.
+
+Depois da primeira configuração, basta abrir o PowerShell na pasta `Fruit-Killer/Webcam-Capture` e rodar `.\.venv\Scripts\python.exe webcam_godot.py` para iniciar o capturador novamente.
 
 ## Versões para navegador
 

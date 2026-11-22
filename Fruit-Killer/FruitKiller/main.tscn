@@ -1,0 +1,116 @@
+[gd_scene load_steps=20 format=3 uid="uid://dssegspnmsbl7"]
+
+[ext_resource type="Script" uid="uid://c0mq233ikwrsu" path="res://main.gd" id="1_ig7tw"]
+[ext_resource type="Texture2D" uid="uid://d4kyn4ws3qf54" path="res://assets/projeto_ganhador_do_ficiencias_uhul!!!!!.png" id="2_1bvp3"]
+[ext_resource type="PackedScene" uid="uid://bslfljwhf81q2" path="res://morango.tscn" id="2_7mycd"]
+[ext_resource type="PackedScene" uid="uid://8xxf4vfpyxs6" path="res://banana.tscn" id="3_272bh"]
+[ext_resource type="FontFile" uid="uid://p8vil5qhuoqr" path="res://assets/the_inquisition/Matcha Style.ttf" id="3_h2yge"]
+[ext_resource type="PackedScene" uid="uid://ca5qkml7ufxje" path="res://kiwi.tscn" id="4_w48qg"]
+[ext_resource type="PackedScene" uid="uid://b6fucc1ka82pu" path="res://laranja.tscn" id="5_vivmo"]
+[ext_resource type="PackedScene" uid="uid://diq6agtp01moj" path="res://limao.tscn" id="6_2cqfq"]
+[ext_resource type="AudioStream" uid="uid://c85jhcyomyy1f" path="res://assets/Trovão_de_Rua.mp3" id="7_272bh"]
+[ext_resource type="PackedScene" uid="uid://x2jgrupi46sd" path="res://maca.tscn" id="7_yaehf"]
+[ext_resource type="PackedScene" uid="uid://te8c8jkfnefy" path="res://pitaya.tscn" id="8_074og"]
+[ext_resource type="PackedScene" uid="uid://dbnvdpuubkl5a" path="res://uva.tscn" id="9_cegan"]
+[ext_resource type="PackedScene" uid="uid://4ykuh6drx0lu" path="res://lanche.tscn" id="10_vivmo"]
+[ext_resource type="Texture2D" uid="uid://c1vjw5i80abom" path="res://assets/bola azul.png" id="10_w48qg"]
+[ext_resource type="PackedScene" uid="uid://d0rbv27nl63pt" path="res://milkshake.tscn" id="11_074og"]
+[ext_resource type="Texture2D" uid="uid://sypsogke2jwf" path="res://assets/bola roxa(murasaki).png" id="11_vivmo"]
+[ext_resource type="PackedScene" uid="uid://cnoqu058w0mr1" path="res://chocolate.tscn" id="12_cegan"]
+[ext_resource type="PackedScene" uid="uid://d21v4a2g5otij" path="res://batata-frita.tscn" id="13_82xsv"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_074og"]
+bg_color = Color(0, 0.039215688, 0, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[node name="main" type="Node2D"]
+script = ExtResource("1_ig7tw")
+cenas_frutas = Array[PackedScene]([ExtResource("2_7mycd"), ExtResource("3_272bh"), ExtResource("4_w48qg"), ExtResource("5_vivmo"), ExtResource("6_2cqfq"), ExtResource("7_yaehf"), ExtResource("8_074og"), ExtResource("9_cegan"), ExtResource("10_vivmo"), ExtResource("11_074og"), ExtResource("12_cegan"), ExtResource("13_82xsv")])
+textura_mao_1 = ExtResource("10_w48qg")
+textura_mao_2 = ExtResource("11_vivmo")
+escala_indicador_mao = Vector2(0.09, 0.09)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(636, 366.25)
+scale = Vector2(0.72829765, 0.82469)
+texture = ExtResource("2_1bvp3")
+
+[node name="TimerFrutas" type="Timer" parent="."]
+wait_time = 0.85
+
+[node name="Interface" type="CanvasLayer" parent="."]
+
+[node name="LabelPontos" type="Label" parent="Interface"]
+offset_left = 1009.0
+offset_top = 13.0
+offset_right = 1144.0
+offset_bottom = 58.0
+theme_override_fonts/font = ExtResource("3_h2yge")
+theme_override_font_sizes/font_size = 38
+text = "Pontos"
+
+[node name="LabelVidas" type="Label" parent="Interface"]
+offset_right = 40.0
+offset_bottom = 23.0
+theme_override_fonts/font = ExtResource("3_h2yge")
+theme_override_font_sizes/font_size = 38
+
+[node name="MenuInicial" type="Control" parent="Interface"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="BotaoJogar" type="Button" parent="Interface/MenuInicial"]
+layout_mode = 0
+offset_left = 503.0
+offset_top = 203.0
+offset_right = 786.0
+offset_bottom = 344.0
+theme_override_fonts/font = ExtResource("3_h2yge")
+theme_override_font_sizes/font_size = 98
+theme_override_styles/normal = SubResource("StyleBoxFlat_074og")
+text = "Start"
+
+[node name="BotaoQuitGame" type="Button" parent="Interface/MenuInicial"]
+layout_mode = 0
+offset_left = 497.0
+offset_top = 448.0
+offset_right = 783.0
+offset_bottom = 591.0
+theme_override_fonts/font = ExtResource("3_h2yge")
+theme_override_font_sizes/font_size = 98
+theme_override_styles/normal = SubResource("StyleBoxFlat_074og")
+text = "Sair"
+
+[node name="MenuGameOver" type="Control" parent="Interface"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="BotaoReiniciar" type="Button" parent="Interface/MenuGameOver"]
+layout_mode = 0
+offset_left = 434.0
+offset_top = 342.0
+offset_right = 861.0
+offset_bottom = 465.0
+theme_override_fonts/font = ExtResource("3_h2yge")
+theme_override_font_sizes/font_size = 98
+theme_override_styles/normal = SubResource("StyleBoxFlat_074og")
+text = "Restart"
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("7_272bh")
+autoplay = true
+
+[node name="Frutas" type="Node2D" parent="."]
+
+[node name="IndicadoresMaos" type="Node2D" parent="."]
+
+[connection signal="pressed" from="Interface/MenuInicial/BotaoJogar" to="." method="_on_botao_jogar_pressed"]
+[connection signal="pressed" from="Interface/MenuInicial/BotaoQuitGame" to="." method="_on_botao_quit_game_pressed"]
+[connection signal="pressed" from="Interface/MenuGameOver/BotaoReiniciar" to="." method="_on_botao_game_over_pressed"]

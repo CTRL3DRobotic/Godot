@@ -1,0 +1,22 @@
+[gd_scene load_steps=5 format=3 uid="uid://bslfljwhf81q2"]
+
+[ext_resource type="PackedScene" uid="uid://c84al8e041sp4" path="res://fruta.tscn" id="1_lprtv"]
+[ext_resource type="Texture2D" uid="uid://jb4omgo6yxhy" path="res://assets/morango_inteira.png" id="2_rv8gf"]
+[ext_resource type="Texture2D" uid="uid://bassx50o0n7rk" path="res://assets/morango_metade_esquerda.png" id="3_d3c21"]
+[ext_resource type="Texture2D" uid="uid://d2u2hv0o11mju" path="res://assets/morango_metade_direita.png" id="4_gje82"]
+
+[node name="fruta" instance=ExtResource("1_lprtv")]
+
+[node name="SpriteInteiro" parent="." index="0"]
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("2_rv8gf")
+
+[node name="MetadeEsquerda" parent="." index="1"]
+visible = false
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("3_d3c21")
+
+[node name="MetadeDireita" parent="." index="2"]
+visible = false
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("4_gje82")

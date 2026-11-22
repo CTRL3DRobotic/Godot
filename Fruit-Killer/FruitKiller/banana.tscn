@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://8xxf4vfpyxs6"]
+
+[ext_resource type="PackedScene" uid="uid://c84al8e041sp4" path="res://fruta.tscn" id="1_mb6cj"]
+[ext_resource type="Texture2D" uid="uid://boult8u7k3kk6" path="res://assets/Imagem do ChatGPT 19 de nov. de 2026, 10_20_08-1.png" id="2_divbi"]
+[ext_resource type="Texture2D" uid="uid://lrjoxetgfngn" path="res://assets/metade esquerda banana.png" id="3_itruy"]
+[ext_resource type="Texture2D" uid="uid://cjsht8qqluo0g" path="res://assets/metade direita banana.png" id="4_4ccy7"]
+
+[node name="fruta" unique_id=1600033198 instance=ExtResource("1_mb6cj")]
+
+[node name="SpriteInteiro" parent="." index="0"]
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("2_divbi")
+
+[node name="MetadeEsquerda" parent="." index="1"]
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("3_itruy")
+
+[node name="MetadeDireita" parent="." index="2"]
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("4_4ccy7")

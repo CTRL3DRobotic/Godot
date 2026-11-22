@@ -1,0 +1,10 @@
+# Executáveis locais e instaladores do Windows
+*.exe
+
+# Cache do editor Godot
+.godot/
+
+# Ambiente virtual e cache do Python
+.venv/
+__pycache__/
+*.py[cod]

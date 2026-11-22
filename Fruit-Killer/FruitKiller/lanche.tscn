@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://4ykuh6drx0lu"]
+
+[ext_resource type="PackedScene" uid="uid://c84al8e041sp4" path="res://fruta.tscn" id="1_mbt56"]
+[ext_resource type="Texture2D" uid="uid://dp45byrihiqwn" path="res://assets/combo no chao.png" id="2_urgg6"]
+[ext_resource type="Texture2D" uid="uid://dk37y0gje2alj" path="res://assets/explosao esquerdo.png" id="3_nr753"]
+[ext_resource type="Texture2D" uid="uid://cvlkcs5sr4ef5" path="res://assets/explosao direita.png" id="4_v52vo"]
+
+[node name="Frutas" unique_id=402893818 instance=ExtResource("1_mbt56")]
+perigosa = true
+
+[node name="SpriteInteiro" parent="." index="0"]
+scale = Vector2(0.15, 0.15)
+texture = ExtResource("2_urgg6")
+
+[node name="MetadeEsquerda" parent="." index="1"]
+visible = false
+scale = Vector2(0.15, 0.15)
+texture = ExtResource("3_nr753")
+
+[node name="MetadeDireita" parent="." index="2"]
+scale = Vector2(0.15, 0.15)
+texture = ExtResource("4_v52vo")

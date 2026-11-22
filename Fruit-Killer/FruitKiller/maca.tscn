@@ -1,0 +1,18 @@
+[gd_scene load_steps=5 format=3 uid="uid://x2jgrupi46sd"]
+
+[ext_resource type="PackedScene" uid="uid://c84al8e041sp4" path="res://fruta.tscn" id="1_gqqc2"]
+[ext_resource type="Texture2D" uid="uid://cxdfa6uh0mfcb" path="res://assets/maca_inteira.png" id="2_nxu7l"]
+[ext_resource type="Texture2D" uid="uid://y42kpbtl1gm5" path="res://assets/maca_metade_esquerda.png" id="3_ebu5i"]
+[ext_resource type="Texture2D" uid="uid://b7hklrol1o5hi" path="res://assets/maca_metade_direita.png" id="4_w0n76"]
+
+[node name="Frutas" instance=ExtResource("1_gqqc2")]
+scale = Vector2(0.3, 0.3)
+
+[node name="SpriteInteiro" parent="." index="0"]
+texture = ExtResource("2_nxu7l")
+
+[node name="MetadeEsquerda" parent="." index="1"]
+texture = ExtResource("3_ebu5i")
+
+[node name="MetadeDireita" parent="." index="2"]
+texture = ExtResource("4_w0n76")

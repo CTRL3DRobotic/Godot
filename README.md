@@ -1,2 +1,0 @@
-# Godot
-Projetos dos Alunos

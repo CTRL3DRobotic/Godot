@@ -4,7 +4,7 @@
 // Incrementing CACHE_VERSION will kick off the install event and force
 // previously cached resources to be updated from the network.
 /** @type {string} */
-const CACHE_VERSION = '1795389096|216270199';
+const CACHE_VERSION = '1795389932|16603993';
 /** @type {string} */
 const CACHE_PREFIX = 'Evobird-sw-cache-';
 const CACHE_NAME = CACHE_PREFIX + CACHE_VERSION;
